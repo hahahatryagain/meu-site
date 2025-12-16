@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: white;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    text-align: center;
+}
+
+.container p {
+    font-size: 2rem;
+    color: black;
+    margin-bottom: 30px;
+}
+
+.container button {
+    padding: 9px 39px;
+    font-size: 1rem;
+    border: 1px solid black;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 999px; /* BEM ARREDONDADO */
+    transition: 0.2s;
+}
+
+.container button:hover {
+    background: black;
+    color: white;
+}

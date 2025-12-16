@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    background-color: black;
+    height: 100vh;
+
+}
+
+.cartaz {
+    display: block;
+    margin: auto;
+    margin-top: 40px;
+    width: 320px;
+    height: auto;
+
+}
+
+.hidden-link {
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    font-size: 10px;
+    color: #ff0000;
+    text-decoration: none;
+    opacity: 0.3;
+
+}
+
+.hidden-link:hover {
+    color: #444;
+    opacity: 1;
+}

@@ -1,0 +1,85 @@
+/* esconder radios */
+input {
+    display: none;
+}
+
+/* layout base */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* container central */
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+
+/* botão base */
+.botao {
+    display: none;
+    padding: 15px 30px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    border: none;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    transform: scale(1.05);
+}
+
+/* =====================
+   ESTADOS DE HUMOR
+   ===================== */
+
+/* NEUTRO */
+#neutro:checked ~ .container {
+    background-color: #e0e0e0;
+}
+
+#neutro:checked ~ .container label[for="feliz"] {
+    display: block;
+    background-color: #777;
+    color: white;
+}
+
+/* FELIZ */
+#feliz:checked ~ .container {
+    background-color: #fff3a0;
+}
+
+#feliz:checked ~ .container label[for="cansado"] {
+    display: block;
+    background-color: #4caf50;
+    color: white;
+}
+
+/* CANSADO */
+#cansado:checked ~ .container {
+    background-color: #2c2c54;
+    color: white;
+}
+
+#cansado:checked ~ .container label[for="raiva"] {
+    display: block;
+    background-color: #9c27b0;
+    color: white;
+}
+
+/* RAIVA */
+#raiva:checked ~ .container {
+    background-color: darkred;
+    color: white;
+}
+
+#raiva:checked ~ .container label[for="neutro"] {
+    display: block;
+    background-color: brown;
+    color: white;
+}

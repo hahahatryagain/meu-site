@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    background: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* IMAGEM DE FUNDO */
+#fundo {
+    position: fixed;
+    inset: 0;
+    background-image: url("imagens/jumpscare.png");
+    background-size: 100% 100%; /* FORÇA A IMAGEM A FICAR ESTICADA */
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+#why-layer {
+    position: fixed;
+    inset: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* MAIS ESPAÇO */
+    grid-auto-rows: 70px; /* MAIS ESPAÇO VERTICAL */
+    z-index: 2;
+}
+
+.why {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    animation: piscar 0.15s infinite alternate; /* UM POUCO MAIS LENTO */
+    user-select: none;
+}
+
+
+/* PISCAR AGRESSIVO */
+@keyframes piscar {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+}
